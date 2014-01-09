@@ -2,8 +2,7 @@
     "name": "manuelj555/group_collection",
     "description": "Permite agrupar arreglos",
     "require": {
-        "php": ">=5.3.3",
-        "symfony/expression-language": "*"
+        "php": ">=5.3.3"
     },
     "autoload":{
         "psr-0" : {
