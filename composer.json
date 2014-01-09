@@ -1,5 +1,5 @@
 {
-    "name": "manuelj555/group",
+    "name": "manuelj555/group_collection",
     "description": "Permite agrupar arreglos",
     "require": {
         "php": ">=5.3.3",
