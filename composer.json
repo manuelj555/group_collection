@@ -1,13 +1,13 @@
 {
-    "name": "manuelj555/group_twig_extension",
-    "description": "Permite agrupar arreglos usando ExpressionLnguage de Symfony",
+    "name": "manuelj555/group",
+    "description": "Permite agrupar arreglos",
     "require": {
         "php": ">=5.3.3",
         "symfony/expression-language": "*"
     },
     "autoload":{
         "psr-0" : {
-            "K2\\GroupExtension" : "src/"
+            "K2\\GroupCollection" : "src/"
         }
     }
 }
