@@ -1,0 +1,13 @@
+{
+    "name": "manuelj555/group_twig_extension",
+    "description": "Permite agrupar arreglos usando ExpressionLnguage de Symfony",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/expression-language": "v2.*"
+    },
+    "autoload":{
+        "psr-0" : {
+            "Twig\\" : "lib/"
+        }
+    }
+}
