@@ -3,7 +3,7 @@
     "description": "Permite agrupar arreglos usando ExpressionLnguage de Symfony",
     "require": {
         "php": ">=5.3.3",
-        "symfony/expression-language": "v2.*"
+        "symfony/expression-language": "*"
     },
     "autoload":{
         "psr-0" : {
