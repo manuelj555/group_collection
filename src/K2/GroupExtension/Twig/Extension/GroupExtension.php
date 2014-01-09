@@ -1,6 +1,6 @@
 <?php
 
-namespace K2\Group\Twig\Extension;
+namespace K2\GroupExtension\Twig\Extension;
 
 use Twig_Extension;
 use Twig_SimpleFilter;
