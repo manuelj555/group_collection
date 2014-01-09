@@ -34,4 +34,9 @@ class GroupedItems implements \IteratorAggregate
         $this->items[] = $item;
     }
 
+    public function __toString()
+    {
+        return (string) $this->getTitle();
+    }
+
 }

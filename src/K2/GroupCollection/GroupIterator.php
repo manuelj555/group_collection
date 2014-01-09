@@ -1,6 +1,8 @@
 <?php
 
-use K2\GroupCollection\GroupedItems;
+namespace K2\GroupCollection;
+
+use Iterator;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -62,10 +64,12 @@ class GroupIterator implements Iterator
 
     public function add($title, $item)
     {
-        if (!isset($this->items[$this->getKey($title)])) {
-            $this->items[$this->getKey($title)] = new GroupedItems($title);
+        $key = $this->getKey($title);
+        if (!isset($this->items[$key])) {
+            $this->items[$key] = new GroupedItems($title);
+            $this->titles[$key] = $title;
         }
-        $this->items[$this->getKey($title)]->add($item);
+        $this->items[$key]->add($item);
     }
 
 }

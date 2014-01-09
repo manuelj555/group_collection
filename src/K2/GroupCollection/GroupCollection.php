@@ -2,7 +2,6 @@
 
 namespace K2\GroupCollection;
 
-use GroupIterator;
 use IteratorAggregate;
 
 /**
@@ -13,28 +12,25 @@ use IteratorAggregate;
 class GroupCollection implements IteratorAggregate
 {
 
-    protected $items = array();
-    protected $callback;
     protected $iterator;
 
     function __construct($items, $callback)
     {
-        $this->items = $items;
-        $this->callback = $callback;
+        $this->group($items, $callback);
     }
 
-    protected function group()
+    protected function group($items, $callback)
     {
         $this->iterator = new GroupIterator();
 
-        foreach ($this->items as $item) {
-            $this->iterator->add($this->getKey($item), $item);
+        foreach ($items as $item) {
+            $this->iterator->add($this->getKey($item, $callback), $item);
         }
     }
 
-    protected function getKey($item)
+    protected function getKey($item, $callback)
     {
-        return call_user_func($this->callback, $item);
+        return call_user_func($callback, $item);
     }
 
     public function getIterator()
