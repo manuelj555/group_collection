@@ -38,4 +38,17 @@ class GroupCollection implements IteratorAggregate
         return $this->iterator;
     }
 
+    public function toArray()
+    {
+        $elements = array();
+
+        foreach ($this as $key => $items) {
+            foreach ($items as $iKey => $item) {
+                $elements[$key][$iKey] = $item;
+            }
+        }
+        
+        return $elements;
+    }
+
 }
