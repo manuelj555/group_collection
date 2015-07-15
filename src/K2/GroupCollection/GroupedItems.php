@@ -14,7 +14,7 @@ use LogicException;
  *
  * @author Manuel Aguirre <programador.manuel@gmail.com>
  */
-class GroupedItems implements IteratorAggregate, ArrayAccess
+class GroupedItems implements IteratorAggregate, ArrayAccess, \Countable
 {
 
     protected $title;
@@ -84,4 +84,8 @@ class GroupedItems implements IteratorAggregate, ArrayAccess
         throw new LogicException('Not supported');
     }
 
+    public function count()
+    {
+        return count($this->items);
+    }
 }

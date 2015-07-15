@@ -15,7 +15,7 @@ use Iterator;
  *
  * @author Manuel Aguirre <programador.manuel@gmail.com>
  */
-class GroupIterator implements Iterator
+class GroupIterator implements Iterator, \Countable
 {
 
     private $items = array();
@@ -72,4 +72,8 @@ class GroupIterator implements Iterator
         $this->items[$key]->add($item);
     }
 
+    public function count()
+    {
+        return count($this->items);
+    }
 }
